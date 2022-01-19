@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <title>
+        게시판 상세조회
+    </title>
+    <style>
+        table {
+          width: 100%;
+          border: 1px solid #444444;
+          border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #444444;
+            padding: 10px;
+        }
+      </style>
+</head>
+
+<body>
+    <div>
+            <table>
+                <tr>
+                    <td> 이름 </td> 
+                    <td> {{ result['name'] }}</td>
+                </tr>
+                <tr>
+                    <td> 제목 </td> 
+                    <td> {{ result['title'] }}</td>
+                </tr>
+                <tr>
+                    <td> 내용 </td> 
+                    <td> 
+                        <pre>
+                            {{ result['content'] }}
+                        </pre>
+
+                    </td>
+                </tr>
+            </table>
+            <img src="/board/down?id={{ result['id'] }}">
+
+     
+    </div>
+</body>
+
+</html>

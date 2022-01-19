@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>
+        게시판 목록보기
+    </title>
+    <style>
+        table {
+          width: 100%;
+          border: 1px solid #444444;
+          border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #444444;
+            padding: 10px;
+        }
+      </style>
+</head>
+
+<body>
+    <div>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>제목</th>
+                <th>이름</th>
+                <th>등록일</th>
+            </tr>
+            {% for row in results %}
+            <tr>
+                <td> {{ row['id'] }} </td>
+                <td> <a href="/board/view?id={{ row['id'] }}">{{ row['title'] }}</a> </td>
+                <td> {{ row['name'] }} </td>
+                <td> {{ row['create_date']|string }} </td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <a href="/board/writeform">글쓰기</a>
+    </div>
+</body>
+
+</html>

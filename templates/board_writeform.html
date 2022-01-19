@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <title>
+        게시판 글쓰기
+    </title>
+    <style>
+        table {
+          width: 100%;
+          border: 1px solid #444444;
+          border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #444444;
+            padding: 10px;
+        }
+      </style>
+</head>
+
+<body>
+    <div>
+        <form method="post" action="/board/write" enctype="multipart/form-data">
+            <table>
+                <tr>
+                    <td> 이름 </td> 
+                    <td> <input type="text" name="name"></td>
+                </tr>
+                <tr>
+                    <td> 암호 </td> 
+                    <td> <input type="password" name="passwd"></td>
+                </tr>
+                <tr>
+                    <td> 제목 </td> 
+                    <td> <input type="text" name="title"></td>
+                </tr>
+                <tr>
+                    <td> 내용 </td> 
+                    <td> <textarea name="content" cols="50" rows="6"></textarea></td>
+                </tr>
+                <tr>
+                    <td> 파일 </td> 
+                    <td> <input type="file" name="file"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>
